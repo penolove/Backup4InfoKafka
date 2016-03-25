@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<toolkitModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/toolkit" productVersion="4.1.0.0" xmlns:common="http://www.ibm.com/xmlns/prod/streams/spl/common" xmlns:ti="http://www.ibm.com/xmlns/prod/streams/spl/toolkitInfo" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <toolkit name="gogo" requiredProductVersion="4.1.0.0" version="1.0.0">
+    <description/>
+    <uriTable>
+      <uri index="4" value="submit/optpdf.spl"/>
+      <uri index="8" value="submit/svmimp.spl"/>
+      <uri index="3" value="submit/M_D.spl"/>
+      <uri index="2" value="submit/comp1.spl"/>
+      <uri index="1" value="submit/gogo.spl"/>
+      <uri index="5" value="submit/allinone.spl"/>
+      <uri index="7" value="submit/svmcpp.spl"/>
+      <uri index="6" value="submit/Allin.spl"/>
+    </uriTable>
+    <namespace name="submit">
+      <compositeOp column="11" line="9" name="gogo" potentialMain="true" uriIndex="1"/>
+      <compositeOp column="11" line="4" name="Comp1" potentialMain="false" public="true" uriIndex="2">
+        <parameter metaType="Expression" name="filename" optional="false"/>
+        <outputPort name="createmap0" portIndex="0"/>
+      </compositeOp>
+      <compositeOp column="11" line="4" name="M_D" potentialMain="false" public="true" uriIndex="3">
+        <inputPort name="HDFS2FileSource_1_out0" portIndex="0"/>
+        <outputPort name="LabelStream1" portIndex="0"/>
+      </compositeOp>
+      <compositeOp column="11" line="6" name="optpdf" potentialMain="true" uriIndex="4"/>
+      <compositeOp column="11" line="5" name="allinone" potentialMain="false" public="true" uriIndex="5">
+        <parameter metaType="Expression" name="topic" optional="false"/>
+        <outputPort name="LabelStream1" portIndex="0"/>
+      </compositeOp>
+      <compositeOp column="11" line="6" name="Allin" potentialMain="true" uriIndex="6"/>
+    </namespace>
+    <dependency>
+      <common:name>com.ibm.streamsx.hdfs</common:name>
+      <common:version>3.0.0</common:version>
+    </dependency>
+    <dependency>
+      <common:name>EAC</common:name>
+      <common:version>[1.0.0,2.0.0)</common:version>
+    </dependency>
+    <dependency>
+      <common:name>com.ibm.streamsx.messaging</common:name>
+      <common:version>[4.0.0,5.0.0)</common:version>
+    </dependency>
+    <sabFiles>
+      <ti:include path="toolkit.xml" root="toolkitDir"/>
+      <ti:include path="impl/java/lib/**" root="toolkitDir"/>
+      <ti:include path="impl/java/bin/**" root="toolkitDir"/>
+      <ti:include path="impl/bin/**" root="toolkitDir"/>
+      <ti:include path="impl/lib/**" root="toolkitDir"/>
+      <ti:include path="impl/nl/*.dat" root="toolkitDir"/>
+      <ti:include path="etc/**" root="toolkitDir"/>
+      <ti:include path="lib/**" root="toolkitDir"/>
+      <ti:include path="nl/**" root="toolkitDir"/>
+      <ti:include path="opt/**" root="toolkitDir"/>
+    </sabFiles>
+  </toolkit>
+
+</toolkitModel>

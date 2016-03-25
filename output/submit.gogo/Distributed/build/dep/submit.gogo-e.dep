@@ -1,0 +1,12 @@
+	@$(CXX) $(SPL_CXXFLAGS) -o bin/submit.gogo-e.dpe -fPIC -shared $(PEsubmit.gogo-e) $(SPL_LDFLAGS)build/pe/BeJwzcwkpSk01NDT0SUxKzQkuKUpNzI0HAErFAdJ.o \
+	    build/operator/DTree1/LabelStream.o \
+	    build/function/application/matchRule.o \
+	    build/type/BeJwrMSo2zUlMSs3JKTEuNctLrSjxdEkySi9xMy1LzClNNS0qzUktBgABDg3A.o \
+	    build/type/BeJwrMS41y0utKPF0STJKL3EzLUvMKU0FAFLpAem.o \
+	    build/type/BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTpdg0JzEpNQcAJh4UAw.o \
+	    build/type/BeJwrMS01y8tPSfV0AdKpFSWeLklG6SVupmWJOaWpxaY5iUmpOQDwWg0u.o \
+	    build/type/BeJwrMSo1y8tPSfV0KTbNSUxKzQEANswGAt.o \
+	    build/type/BeJwrMcw0TSnNza0EABAkANw.o \
+	    build/type/BeJyrNIo3NArPzEvJL_1dNLMpOLTI0dMvMS8yBcACkegr2.o \
+	    build/type/BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF.o \
+	    build/type/BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n.o 

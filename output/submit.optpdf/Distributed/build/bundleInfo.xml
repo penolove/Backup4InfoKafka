@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bundleInfoModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/bundleInfoModel" adlFile="submit.optpdf.adl" applicationDirectory="gogo" buildDate="" buildId="" bundleVersion="4100" executionMode="distributed" outputDirectory="Distributed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <toolkit compileRoot="/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/spl" name="spl" version="1.2.1">
+    <file name="impl/lib/com.ibm.streams.control.internal.jar"/>
+    <file name="impl/lib/libstreams-stdtk-runtime.so.0"/>
+    <file name="impl/lib/libstreams-stdtk-javaop.so.0"/>
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/hduser/Downloads/StreamsStudio/workspace/EAC" name="EAC" version="1.0.0">
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.hdfs" name="com.ibm.streamsx.hdfs" version="3.0.0">
+    <file name="impl/lib/BigData.jar"/>
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/hduser/Downloads/StreamsStudio/workspace/gogo" name="gogo" version="1.0.0">
+    <file name="toolkit.xml"/>
+    <file name="etc/consumer.properties"/>
+    <file name="etc/124.txt"/>
+    <file name="etc/producer.properties"/>
+  </toolkit>
+
+</bundleInfoModel>

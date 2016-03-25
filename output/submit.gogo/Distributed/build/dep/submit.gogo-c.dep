@@ -1,0 +1,5 @@
+	@$(CXX) $(SPL_CXXFLAGS) -o bin/submit.gogo-c.dpe -fPIC -shared $(PEsubmit.gogo-c) $(SPL_LDFLAGS)build/pe/BeJwzNEguSk0sSc1NLDCIBwAfUgSj.o \
+	    build/operator/createmap0.o \
+	    build/type/BeJwrMSw2zcnMSy0GABBPANp.o \
+	    build/type/BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF.o \
+	    build/type/BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n.o 

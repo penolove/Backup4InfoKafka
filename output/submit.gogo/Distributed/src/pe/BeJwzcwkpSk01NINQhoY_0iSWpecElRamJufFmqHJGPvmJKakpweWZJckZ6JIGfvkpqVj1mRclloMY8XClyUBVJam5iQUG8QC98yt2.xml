@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<peModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/pe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <class>BeJwzcwkpSk01NINQhoY_0iSWpecElRamJufFmqHJGPvmJKakpweWZJckZ6JIGfvkpqVj1mRclloMY8XClyUBVJam5iQUG8QC98yt2</class>
+    <javaVM>
+      <vmArgs/>
+    </javaVM>
+    <avoidRuntimeYield>Auto</avoidRuntimeYield>
+  </context>
+
+  <operators>
+    <operator>
+      <class>DTree1::DTree1::LatenStream</class>
+    </operator>
+    <operator>
+      <class>DTree1::DTree1::LoadedSwitch</class>
+    </operator>
+    <operator>
+      <class>DTree1::DTree1::NodeStream</class>
+    </operator>
+    <operator>
+      <class>DTree1::DTree1::rawTree</class>
+    </operator>
+    <operator>
+      <class>DTree1::createmap0</class>
+    </operator>
+  </operators>
+
+</peModel>

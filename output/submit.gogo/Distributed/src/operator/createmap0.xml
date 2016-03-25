@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<operatorInstanceModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/operator/instance" xmlns:an="http://www.ibm.com/xmlns/prod/streams/spl/annotation" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <kind>spl.utility::Custom</kind>
+    <class>createmap0</class>
+    <operatorModelDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/spl/spl/utility/Custom</operatorModelDirectory>
+    <applicationDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo</applicationDirectory>
+    <dataDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo/data</dataDirectory>
+    <outputDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo/output/submit.gogo/Distributed</outputDirectory>
+    <toolkits>
+      <toolkit isCurrentToolkit="false">
+        <name>gogo</name>
+        <rootDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo</rootDirectory>
+        <index>0</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="true">
+        <name>spl</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/spl</rootDirectory>
+        <index>1</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>EAC</name>
+        <rootDirectory>/home/hduser/Downloads/StreamsStudio/workspace/EAC</rootDirectory>
+        <index>2</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cep</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.cep</rootDirectory>
+        <index>3</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cybersecurity</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.cybersecurity</rootDirectory>
+        <index>4</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.dataexplorer</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.dataexplorer</rootDirectory>
+        <index>5</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.db</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.db</rootDirectory>
+        <index>6</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.financial</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.financial</rootDirectory>
+        <index>7</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.geospatial</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.geospatial</rootDirectory>
+        <index>8</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.mining</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.mining</rootDirectory>
+        <index>9</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rproject</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.rproject</rootDirectory>
+        <index>10</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rules</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.rules</rootDirectory>
+        <index>11</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.teda</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.teda</rootDirectory>
+        <index>12</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.text</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.text</rootDirectory>
+        <index>13</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.timeseries</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.timeseries</rootDirectory>
+        <index>14</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.dps</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.dps</rootDirectory>
+        <index>15</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hbase</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.hbase</rootDirectory>
+        <index>16</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hdfs</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.hdfs</rootDirectory>
+        <index>17</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.inet</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.inet</rootDirectory>
+        <index>18</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messaging</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.messaging</rootDirectory>
+        <index>19</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.sparkmllib</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.sparkMLLib</rootDirectory>
+        <index>20</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.topology</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.topology</rootDirectory>
+        <index>21</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>streamsx.networkpacket</name>
+        <rootDirectory>/home/hduser/Downloads/StreamsStudio/workspace/streamsx.networkpacket</rootDirectory>
+        <index>22</index>
+      </toolkit>
+    </toolkits>
+    <optimized>true</optimized>
+    <verbose>false</verbose>
+    <networkByteOrdering>false</networkByteOrdering>
+    <codeBeautification>false</codeBeautification>
+    <includes>
+      <include>"../type/BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n.h"</include>
+      <include>"../type/BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF.h"</include>
+      <include>"../type/BeJwrMSw2zcnMSy0GABBPANp.h"</include>
+    </includes>
+    <stateVariables>
+      <stateVariable>
+        <name>state$counter</name>
+        <cppType>SPL::map&lt;SPL::rstring, SPL::float64 &gt;</cppType>
+        <splType>map&lt;rstring,float64&gt;</splType>
+        <sourceLocation>
+          <file>submit/gogo.spl</file>
+          <line>19</line>
+          <column>36</column>
+        </sourceLocation>
+      </stateVariable>
+      <stateVariable>
+        <name>state$attr</name>
+        <cppType>SPL::list&lt;SPL::rstring &gt;</cppType>
+        <splType>list&lt;rstring&gt;</splType>
+        <value>
+          <cppType>SPL::list&lt;SPL::rstring &gt;</cppType>
+          <splType>list&lt;rstring&gt;</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$5</cppExpression>
+          <splExpression>["packet1", "packet2", "packet3", "packet4", "packet5", "No_segA", "No_segB", "No_segFr", "totalsizA", "totalsizB", "totalsizFr", "dport", "sport"]</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <sourceLocation>
+            <file>submit/gogo.spl</file>
+            <line>20</line>
+            <column>35</column>
+          </sourceLocation>
+        </value>
+        <sourceLocation>
+          <file>submit/gogo.spl</file>
+          <line>20</line>
+          <column>28</column>
+        </sourceLocation>
+      </stateVariable>
+      <stateVariable>
+        <name>state$temp</name>
+        <cppType>SPL::list&lt;SPL::rstring &gt;</cppType>
+        <splType>list&lt;rstring&gt;</splType>
+        <sourceLocation>
+          <file>submit/gogo.spl</file>
+          <line>23</line>
+          <column>28</column>
+        </sourceLocation>
+      </stateVariable>
+    </stateVariables>
+    <runtimeConstants>
+      <runtimeConstant>
+        <name>lit$0</name>
+        <cppType>SPL::rstring</cppType>
+        <splType>rstring</splType>
+        <value>","</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$1</name>
+        <cppType>SPL::boolean</cppType>
+        <splType>boolean</splType>
+        <value>true</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$2</name>
+        <cppType>SPL::int32</cppType>
+        <splType>int32</splType>
+        <value>13</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$3</name>
+        <cppType>SPL::BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n</cppType>
+        <splType>tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt;</splType>
+        <value>{srcAddr = "123", srcPort = 456, dstAddr = "123", dstPort = 456}</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$4</name>
+        <cppType>SPL::uint32</cppType>
+        <splType>uint32</splType>
+        <value>0</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$5</name>
+        <cppType>SPL::list&lt;SPL::rstring &gt;</cppType>
+        <splType>list&lt;rstring&gt;</splType>
+        <value>["packet1", "packet2", "packet3", "packet4", "packet5", "No_segA", "No_segB", "No_segFr", "totalsizA", "totalsizB", "totalsizFr", "dport", "sport"]</value>
+      </runtimeConstant>
+    </runtimeConstants>
+    <sourceLocation>
+      <file>submit/gogo.spl</file>
+      <line>13</line>
+      <column>3</column>
+    </sourceLocation>
+    <productVersion>4.1.0.0</productVersion>
+    <checkpointKind>none</checkpointKind>
+  </context>
+
+  <parameters/>
+
+  <inputPorts>
+    <inputPort>
+      <index>0</index>
+      <tupleCppName>iport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMSw2zcnMSy0GABBPANp</tupleCppType>
+      <tupleSPLType>tuple&lt;rstring lines&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>true</mutationAllowed>
+      <sourceLocation>
+        <file>submit/gogo.spl</file>
+        <line>14</line>
+        <column>52</column>
+      </sourceLocation>
+      <tupleLogic>{
+    state$temp = ::SPL::Functions::String::tokenize(iport$0.get_lines(), lit$0, (SPL::boolean)lit$1);
+    if ((::SPL::Functions::Collections::size(state$temp) == lit$2)) 
+        {
+            {
+                for (SPL::int32 id$k = 0; id$k &lt; 13; id$k++) {
+                    {
+                        state$counter[state$attr.at(id$k)] = ::SPL::spl_cast&lt;SPL::float64, SPL::rstring &gt;::cast(state$temp.at(id$k));
+                    }
+                }
+            }
+            do { SPL::BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF temp = SPL::BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF(lit$3, state$counter); submit (temp, lit$4); } while(0);
+        }
+}
+</tupleLogic>
+      <attributes>
+        <attribute>
+          <name>lines</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="lines" type="rstring"/>
+      </tuple>
+    </inputPort>
+  </inputPorts>
+
+  <outputPorts>
+    <outputPort>
+      <index>0</index>
+      <tupleCppName>oport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF</tupleCppType>
+      <tupleSPLType>tuple&lt;tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt; flowID,map&lt;rstring,float64&gt; features&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>true</mutationAllowed>
+      <sourceLocation>
+        <file>submit/gogo.spl</file>
+        <line>14</line>
+        <column>3</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>flowID</name>
+          <cppType>SPL::BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n</cppType>
+          <splType>tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt;</splType>
+        </attribute>
+        <attribute>
+          <name>features</name>
+          <cppType>SPL::map&lt;SPL::rstring, SPL::float64 &gt;</cppType>
+          <splType>map&lt;rstring,float64&gt;</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="flowID">
+          <tt:tuple>
+            <tt:attr name="srcAddr" type="rstring"/>
+            <tt:attr name="srcPort" type="uint16"/>
+            <tt:attr name="dstAddr" type="rstring"/>
+            <tt:attr name="dstPort" type="uint16"/>
+          </tt:tuple>
+        </tt:attr>
+        <tt:attr name="features">
+          <tt:map keyType="rstring" valueType="float64"/>
+        </tt:attr>
+      </tuple>
+      <finalPunctuationPortScope>
+        <port>0</port>
+      </finalPunctuationPortScope>
+    </outputPort>
+  </outputPorts>
+
+</operatorInstanceModel>

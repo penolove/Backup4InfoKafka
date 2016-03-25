@@ -1,0 +1,51 @@
+namespace submit;
+
+public
+composite M_D(input HDFS2FileSource_1_out0 ;output LabelStream1) {
+
+  graph
+
+		stream<application::Feature> createmap0 = Custom(HDFS2FileSource_1_out0)
+		{
+			logic
+				state :
+				{
+					mutable map<rstring, float64> counter ;
+					mutable list<rstring> attr = [ 'packet1', 'packet2', 'packet3', 'packet4',
+						'packet5', 'No_segA', 'No_segB', 'No_segFr', 'totalsizA', 'totalsizB',
+						'totalsizFr', 'dport', 'sport' ] ;
+					mutable list<rstring> temp ;
+				}
+
+				onTuple HDFS2FileSource_1_out0 :
+				{
+					temp = tokenize(lines, ",", true) ;
+					if(size(temp) == 13)
+					{
+						for(int32 k in range(0, 13))
+						{
+							counter [ attr [ k ] ] =(float64) temp [ k ] ;
+						}
+
+						submit({ flowID = { srcAddr = "123", srcPort =(uint16) 456, dstAddr =
+							"123", dstPort =(uint16) 456 }, features = counter }, createmap0) ;
+					}
+
+				}
+			config placement: partitionColocation("AB");
+				   threadedPort: queue(HDFS2FileSource_1_out0,Sys.Wait);
+
+				   
+		}
+		(stream<application::FlowID flowID, rstring label> LabelStream1; stream<rstring topic,rstring message> OutputStream) as DTree1 =
+			application::DTree_Classifier(createmap0)
+		{
+			param
+				filename : "/user/124.txt" ;
+			config
+				placement: partitionColocation("AB");
+
+		}
+}
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<applicationSet xmlns="http://www.ibm.com/xmlns/prod/streams/application" name="submit::HDFSC.appset" productVersion="4.1.0.0" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <description>submit::HDFSC application set</description>
+
+  <application adlPath="Distributed/submit.HDFSC.adl" applicationDirectory="toolkits/gogo" applicationScope="Default" buildId="" bundle="./submit.HDFSC.sab" checkpointDirectory="/home/hduser/Downloads/StreamsStudio/workspace/gogo/data/ckpt" dataDirectory="/home/hduser/Downloads/StreamsStudio/workspace/gogo/data" name="submit::HDFSC" outputDirectory="Distributed" version="1.0.0">
+    <libraries/>
+    <hostpools/>
+    <tupleTypes/>
+    <pes/>
+    <operDefinitions/>
+    <composites>
+      <sourceUris>
+        <uri index="0" path="file:///home/hduser/Downloads/StreamsStudio/workspace/gogo/submit/HDFSC.spl"/>
+      </sourceUris>
+      <compositeOpers>
+        <compositeOper endLine="4" index="0" kind="submit::HDFSC" numberOfInputPorts="0" numberOfOutputPorts="0" sourceIndex="0" startLine="3" toolkitIndex="0">
+          <description>submit::HDFSC Composite</description>
+        </compositeOper>
+      </compositeOpers>
+      <compositeOperInstances>
+        <compositeOperInstance compositeOperIndex="0" endLine="4" index="0" name="submit::HDFSC" sourceIndex="0" startLine="3"/>
+      </compositeOperInstances>
+    </composites>
+    <toolkits>
+      <toolkit index="0" name="gogo" uri="file:///home/hduser/Downloads/StreamsStudio/workspace/gogo" version="1.0.0"/>
+      <toolkit index="1" name="spl" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/spl" version="1.2.1"/>
+      <toolkit index="2" name="EAC" uri="file:///home/hduser/Downloads/StreamsStudio/workspace/EAC" version="1.0.0"/>
+      <toolkit index="3" name="com.ibm.streams.cep" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.cep" version="2.0.0"/>
+      <toolkit index="4" name="com.ibm.streams.cybersecurity" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.cybersecurity" version="1.0.0"/>
+      <toolkit index="5" name="com.ibm.streams.dataexplorer" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.dataexplorer" version="2.0.0"/>
+      <toolkit index="6" name="com.ibm.streams.db" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.db" version="2.0.0"/>
+      <toolkit index="7" name="com.ibm.streams.financial" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.financial" version="2.0.0"/>
+      <toolkit index="8" name="com.ibm.streams.geospatial" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.geospatial" version="3.0.1"/>
+      <toolkit index="9" name="com.ibm.streams.mining" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.mining" version="2.0.0"/>
+      <toolkit index="10" name="com.ibm.streams.rproject" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.rproject" version="2.0.1"/>
+      <toolkit index="11" name="com.ibm.streams.rules" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.rules" version="2.0.0"/>
+      <toolkit index="12" name="com.ibm.streams.teda" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.teda" version="1.0.2"/>
+      <toolkit index="13" name="com.ibm.streams.text" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.text" version="2.1.0"/>
+      <toolkit index="14" name="com.ibm.streams.timeseries" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.timeseries" version="3.1.0"/>
+      <toolkit index="15" name="com.ibm.streamsx.dps" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.dps" version="2.1.0"/>
+      <toolkit index="16" name="com.ibm.streamsx.hbase" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.hbase" version="2.0.0"/>
+      <toolkit index="17" name="com.ibm.streamsx.hdfs" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.hdfs" version="3.0.0"/>
+      <toolkit index="18" name="com.ibm.streamsx.inet" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.inet" version="2.0.1"/>
+      <toolkit index="19" name="com.ibm.streamsx.messaging" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.messaging" version="3.0.0"/>
+      <toolkit index="20" name="com.ibm.streamsx.sparkmllib" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.sparkMLLib" version="1.0.0"/>
+      <toolkit index="21" name="com.ibm.streamsx.topology" uri="file:///home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.topology" version="1.1.3"/>
+      <toolkit index="22" name="streamsx.networkpacket" uri="file:///home/hduser/Downloads/StreamsStudio/workspace/streamsx.networkpacket" version="1.0.0"/>
+    </toolkits>
+  </application>
+
+</applicationSet>

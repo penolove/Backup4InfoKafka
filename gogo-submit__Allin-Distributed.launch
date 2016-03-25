@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><launchConfiguration type="com.ibm.streams.studio.launchers.launchConfigurationType3">
+<stringAttribute key="buildConfig" value="Distributed"/>
+<stringAttribute key="compositeName" value="submit::Allin"/>
+<stringAttribute key="dataDirectory" value=""/>
+<stringAttribute key="executionDirectory" value=""/>
+<stringAttribute key="instance" value="infoinst@infostreams"/>
+<stringAttribute key="jobGroup" value="default"/>
+<stringAttribute key="jobName" value="gogo - submit::Allin - Distributed="/>
+<stringAttribute key="loggingLevel" value="DEFAULT"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/gogo"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.debug.core.capture_output" value="false"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_OUTPUT_ON" value="false"/>
+<stringAttribute key="preload" value="$default"/>
+<stringAttribute key="projectName" value="gogo"/>
+<booleanAttribute key="prompt" value="true"/>
+<stringAttribute key="sampleName" value=""/>
+<stringAttribute key="samplePath" value=""/>
+<stringAttribute key="tracingLevel" value="DEFAULT"/>
+</launchConfiguration>

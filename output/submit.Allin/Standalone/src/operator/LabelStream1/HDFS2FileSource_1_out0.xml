@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<operatorInstanceModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/operator/instance" xmlns:an="http://www.ibm.com/xmlns/prod/streams/spl/annotation" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <kind>spl.adapter::FileSource</kind>
+    <class>LabelStream1::HDFS2FileSource_1_out0</class>
+    <operatorModelDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/spl/spl/adapter/FileSource</operatorModelDirectory>
+    <applicationDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo</applicationDirectory>
+    <dataDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo/data</dataDirectory>
+    <outputDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo/output/submit.Allin/Standalone</outputDirectory>
+    <toolkits>
+      <toolkit isCurrentToolkit="false">
+        <name>gogo</name>
+        <rootDirectory>/home/hduser/Downloads/StreamsStudio/workspace/gogo</rootDirectory>
+        <index>0</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="true">
+        <name>spl</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/spl</rootDirectory>
+        <index>1</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>EAC</name>
+        <rootDirectory>/home/hduser/Downloads/StreamsStudio/workspace/EAC</rootDirectory>
+        <index>2</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cep</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.cep</rootDirectory>
+        <index>3</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.cybersecurity</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.cybersecurity</rootDirectory>
+        <index>4</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.dataexplorer</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.dataexplorer</rootDirectory>
+        <index>5</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.db</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.db</rootDirectory>
+        <index>6</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.financial</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.financial</rootDirectory>
+        <index>7</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.geospatial</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.geospatial</rootDirectory>
+        <index>8</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.mining</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.mining</rootDirectory>
+        <index>9</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rproject</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.rproject</rootDirectory>
+        <index>10</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.rules</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.rules</rootDirectory>
+        <index>11</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.teda</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.teda</rootDirectory>
+        <index>12</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.text</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.text</rootDirectory>
+        <index>13</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streams.timeseries</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streams.timeseries</rootDirectory>
+        <index>14</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.dps</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.dps</rootDirectory>
+        <index>15</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hbase</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.hbase</rootDirectory>
+        <index>16</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hdfs</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.hdfs</rootDirectory>
+        <index>17</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.inet</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.inet</rootDirectory>
+        <index>18</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messaging</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.messaging</rootDirectory>
+        <index>19</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.sparkmllib</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.sparkMLLib</rootDirectory>
+        <index>20</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.topology</name>
+        <rootDirectory>/home/hduser/InfoSphere_Streams/4.1.0.0/toolkits/com.ibm.streamsx.topology</rootDirectory>
+        <index>21</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>streamsx.networkpacket</name>
+        <rootDirectory>/home/hduser/Downloads/StreamsStudio/workspace/streamsx.networkpacket</rootDirectory>
+        <index>22</index>
+      </toolkit>
+    </toolkits>
+    <optimized>true</optimized>
+    <verbose>false</verbose>
+    <networkByteOrdering>false</networkByteOrdering>
+    <codeBeautification>false</codeBeautification>
+    <includes>
+      <include>"../../type/BeJwrMSw2zcnMSy0GABBPANp.h"</include>
+      <include>"../../type/BeJyrNI03Ti4uMy6pKDFOyswzTcrJT842ycnMSwUAf_1wJCo.h"</include>
+    </includes>
+    <stateVariables/>
+    <runtimeConstants>
+      <runtimeConstant>
+        <name>lit$0</name>
+        <cppType>SPL::rstring</cppType>
+        <splType>rstring</splType>
+        <value>"flows1.txt"</value>
+      </runtimeConstant>
+    </runtimeConstants>
+    <sourceLocation>
+      <file>submit/allinone.spl</file>
+      <line>7</line>
+      <column>3</column>
+    </sourceLocation>
+    <productVersion>4.1.0.0</productVersion>
+    <checkpointKind>none</checkpointKind>
+  </context>
+
+  <parameters>
+    <parameter>
+      <name>file</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$0</cppExpression>
+          <splExpression>"flows1.txt"</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>submit/allinone.spl</file>
+            <line>9</line>
+            <column>11</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>submit/allinone.spl</file>
+        <line>9</line>
+        <column>5</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>format</name>
+      <values>
+        <value>
+          <cppType>DataFormat</cppType>
+          <splType>DataFormat</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>line</cppExpression>
+          <splExpression>line</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>CustomLiteral</parameterExpressionMode>
+          <sourceLocation>
+            <file>submit/allinone.spl</file>
+            <line>10</line>
+            <column>13</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>submit/allinone.spl</file>
+        <line>10</line>
+        <column>5</column>
+      </sourceLocation>
+    </parameter>
+  </parameters>
+
+  <inputPorts/>
+
+  <outputPorts>
+    <outputPort>
+      <index>0</index>
+      <tupleCppName>oport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMSw2zcnMSy0GABBPANp</tupleCppType>
+      <tupleSPLType>tuple&lt;rstring lines&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>true</mutationAllowed>
+      <sourceLocation>
+        <file>submit/allinone.spl</file>
+        <line>7</line>
+        <column>3</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>lines</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="lines" type="rstring"/>
+      </tuple>
+      <finalPunctuationPortScope/>
+    </outputPort>
+  </outputPorts>
+
+</operatorInstanceModel>

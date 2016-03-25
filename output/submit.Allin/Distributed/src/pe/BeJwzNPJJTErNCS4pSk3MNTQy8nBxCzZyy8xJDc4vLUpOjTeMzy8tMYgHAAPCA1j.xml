@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<peModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/pe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <class>BeJwzNPJJTErNCS4pSk3MNTQy8nBxCzZyy8xJDc4vLUpOjTeMzy8tMYgHAAPCA1j</class>
+    <javaVM>
+      <vmArgs/>
+    </javaVM>
+    <avoidRuntimeYield>Auto</avoidRuntimeYield>
+  </context>
+
+  <operators>
+    <operator>
+      <class>LabelStream1::HDFS2FileSource_1_out0</class>
+    </operator>
+  </operators>
+
+</peModel>

@@ -1,0 +1,20 @@
+	@$(CXX) $(SPL_CXXFLAGS) -o bin/submit.gogo-a.dpe -fPIC -shared $(PEsubmit.gogo-a) -lstreams-stdtk-javaop -L /usr/java/jdk1.8.0_71/jre/lib/amd64/server -Wl,-rpath -Wl,/usr/java/jdk1.8.0_71/jre/lib/amd64/server -lpthread -ldl -lstreams-stdtk-runtime $(SPL_LDFLAGS)build/pe/BeJwzcwkpSk01NINQhoY_0iSWpecElRamJufFmqHJGPvmJKakpweWZJckZ6JIGfvkpqVj1mRclloMY8XClyUBVJam5iQUG8QC98yt2.o \
+	    build/operator/DTree1/createmap0.o \
+	    build/type/BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF.o \
+	    build/type/BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n.o \
+	    build/type/BeJwrMSw2zcnMSy0GABBPANp.o \
+	    build/operator/DTree1/DTree1/rawTree.o \
+	    build/type/BeJwrMSw2ycnMSwUADOECD1.o \
+	    build/operator/DTree1/DTree1/NodeStream.o \
+	    build/function/application/regexIsMatchAll.o \
+	    build/type/BeJwrMS01y8tPSfV0AdKpFSWeLklG6SVupmWJOaWpxaY5iUmpOQDwWg0u.o \
+	    build/type/BeJyrNIo3NArPzEvJL_1dNLMpOLTI0dMvMS8yBcACkegr2.o \
+	    build/type/BeJwrMSo1y8tPSfV0KTbNSUxKzQEANswGAt.o \
+	    build/operator/DTree1/DTree1/LatenStream.o \
+	    build/function/application/matchRule.o \
+	    build/type/BeJwrMS41y0utKPF0STJKL3EzLUvMKU0FAFLpAem.o \
+	    build/type/BeJwrMSo2zUlMSs3JKTEuNctLrSjxdEkySi9xMy1LzClNNS0qzUktBgABDg3A.o \
+	    build/type/BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTpdg0JzEpNQcAJh4UAw.o \
+	    build/type/BeJwrMcw0TSnNza0EABAkANw.o \
+	    build/type/BeJwrMSo2LckvyEwuNs9NLS5OTE8FAEDwAb9.o \
+	    build/operator/DTree1/DTree1/LoadedSwitch.o 
