@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<peModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/pe" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <class>BeJx9jMEKgzAQRH8p40HPlgoFgz3Eu6xmpWI1IW7x91W8Be1phnnDQ6Kp5a_0RwDQhfdaBGYAm4fkcG1xeEu3IsjXrIN3n5qMqZ_1mfJQu0HiWiQEn9SGaYx7e_1YVdWqG5P4Ym8ilDmf7LsvngW93rkpmg2sutcCt</class>
+    <javaVM>
+      <vmArgs/>
+    </javaVM>
+    <avoidRuntimeYield>Auto</avoidRuntimeYield>
+  </context>
+
+  <operators>
+    <operator>
+      <class>LabelStream1::DTree1::LatenStream</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::DTree1::LoadedSwitch</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::DTree1::NodeStream</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::DTree1::rawTree</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::KafkaSinkOp</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::KafkaStream</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::createmap0</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::putsink</class>
+    </operator>
+    <operator>
+      <class>LabelStream1::toHBASE</class>
+    </operator>
+  </operators>
+
+</peModel>

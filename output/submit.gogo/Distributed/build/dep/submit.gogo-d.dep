@@ -1,5 +1,0 @@
-	@$(CXX) $(SPL_CXXFLAGS) -o bin/submit.gogo-d.dpe -fPIC -shared $(PEsubmit.gogo-d) $(SPL_LDFLAGS)build/pe/BeJwzcwkpSk01NDTyyU9MSU0JLs8sSc6IBwBS4ge5.o \
-	    build/operator/DTree1/LoadedSwitch.o \
-	    build/type/BeJwrMcw0TSnNza0EABAkANw.o \
-	    build/type/BeJwrMSoxKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1GACRDBZF.o \
-	    build/type/BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n.o 

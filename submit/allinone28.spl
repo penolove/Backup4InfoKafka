@@ -1,0 +1,112 @@
+namespace submit ;
+
+use com.ibm.streamsx.messaging.kafka::* ;
+use com.ibm.streamsx.hbase::HBASEPut ;
+
+public composite allinone28(output LabelStream1 )
+{
+	param
+		expression $topic ;
+	graph
+		stream<rstring key, rstring message> KafkaStream = KafkaConsumer()
+		{
+			param
+				propertiesFile : "etc/consumer28.properties" ;
+				topic : $topic ;
+			config
+				placement : partitionColocation("AB") ;
+		}
+
+		stream<application::Feature> createmap0 = Custom(KafkaStream)
+		{
+			logic
+				state :
+				{
+					mutable map<rstring, float64> counter ;
+					mutable list<rstring> attr = [ 'latenID', 'packet1', 'packet2', 'packet3',
+						'packet4', 'packet5', 'No_segA', 'No_segB', 'No_segFr', 'totalsizA',
+						'totalsizB', 'totalsizFr', 'dport', 'sport' ] ;
+					mutable list<rstring> temp ;
+				}
+
+				onTuple KafkaStream :
+				{
+					temp = tokenize(message, ",", true) ;
+					//println((size(temp)));
+					if(size(temp) == 14)
+					{
+						for(int32 k in range(0, 14))
+						{
+							counter [ attr [ k ] ] =(float64) temp [ k ] ;
+						}
+
+						submit({ flowID = { srcAddr = "123", srcPort =(uint16) 456, dstAddr =
+							"123", dstPort =(uint16) 456 }, features = counter }, createmap0) ;
+					}
+
+					else if(size(temp) == 13)
+					{
+						counter [ "latenID" ] = 0.0 ;
+						for(int32 k in range(1, 14))
+						{
+							counter [ attr [ k ] ] =(float64) temp [ k ] ;
+						}
+
+						submit({ flowID = { srcAddr = "123", srcPort =(uint16) 456, dstAddr =
+							"123", dstPort =(uint16) 456 }, features = counter }, createmap0) ;
+					}
+
+				}
+
+				config
+					placement : partitionColocation("AB") ;
+					threadedPort : queue(KafkaStream, Sys.Wait) ;
+			}
+
+		(stream<application::FlowID flowID, rstring label> LabelStream1 ;
+			stream<rstring topic, rstring message> OutputStream) as DTree1 =
+				application::DTree_Classifier(createmap0)
+			{
+				param
+					filename : "/user/124.txt" ;
+				config
+					placement : partitionColocation("AB") ;
+			}
+
+		() as KafkaSinkOp = KafkaProducer(OutputStream)
+			{
+				param
+					propertiesFile : "etc/producer.properties" ;
+				config
+					placement : partitionColocation("AB") ;
+			}
+		//write to Hbase
+		stream<rstring key, tuple<rstring timeend> data >toHBASE = Custom(OutputStream)
+			{
+				logic
+					onTuple OutputStream :{
+						if((int32)message%1000==0){
+							submit({key = message, data ={timeend="123"}},toHBASE) ;
+						}
+					}
+				config
+					placement : partitionColocation("AB") ;
+			}
+		() as putsink = HBASEPut(toHBASE)
+			{
+				param
+					hbaseSite : "hbase-site.xml" ;
+					rowAttrName : "key" ;
+					tableName : "streamsSample_books" ;
+					staticColumnFamily : "all" ;
+					valueAttrName : "data" ;
+				config
+					placement : partitionColocation("AB") ;
+			}
+
+
+	}
+
+
+
+

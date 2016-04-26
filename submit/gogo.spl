@@ -1,37 +1,3 @@
-namespace submit;
-
-use application::DTree_Classifier ;
+namespace submit ;
 
 
-
-
-
-composite gogo {
-	graph
-		
-		stream<rstring lines> HDFS2FileSource_1_out0 = com.ibm.streamsx.hdfs::HDFS2FileSource()
-		{
-			param
-				hdfsUri : "hdfs://info1:9000" ;
-				file : "/user/flows5g.txt" ;
-			config placement: host(HDFSreader);
-				   
-		}
-		
-		
-		@parallel(width=7)
-		(stream<application::FlowID flowID, rstring label> LabelStream1) as DTree1 =
-			M_D(HDFS2FileSource_1_out0)
-		{
-			config
-				placement : host(createmap);
-
-		}
-
-
-	config hostPool: 
-		HDFSreader = createPool({tags=["HDFSreader"], size=1}, Sys.Exclusive),
-		createmap = createPool({tags=["createmap"], size=2}, Sys.Exclusive);
-  		//decision = createPool({tags=["decision"], size=1}, Sys.Exclusive);
-  		
-}

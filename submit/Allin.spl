@@ -3,14 +3,14 @@ use com.ibm.streamsx.messaging.kafka::*;
 
 use application::DTree_Classifier ;
 
-composite Allin
+composite Inv27
 {
 	graph
-		@parallel(width=3)
+		@parallel(width=7)
 		(stream<application::FlowID flowID, rstring label> LabelStream1) =
-			submit::allinone()
+			submit::allinone27()
 		{	param
-				topic:"3party";
+				topic:"28party";
 			config
 				placement : host(kafak_tree) ;
 		}

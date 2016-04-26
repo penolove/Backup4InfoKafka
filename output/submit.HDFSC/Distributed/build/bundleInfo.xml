@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<bundleInfoModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/bundleInfoModel" adlFile="submit.HDFSC.adl" applicationDirectory="gogo" buildDate="" buildId="" bundleVersion="4100" executionMode="distributed" outputDirectory="Distributed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <toolkit compileRoot="/home/hduser/Downloads/StreamsStudio/workspace/gogo" name="gogo" version="1.0.0">
-    <file name="toolkit.xml"/>
-  </toolkit>
-
-</bundleInfoModel>

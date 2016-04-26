@@ -1,3 +1,0 @@
-	@$(CXX) $(SPL_CXXFLAGS) -o bin/submit.Allin-c.dpe -fPIC -shared $(PEsubmit.Allin-c) -lstreams-stdtk-javaop -L /usr/java/jdk1.8.0_71/jre/lib/amd64/server -Wl,-rpath -Wl,/usr/java/jdk1.8.0_71/jre/lib/amd64/server -lpthread -ldl -lstreams-stdtk-runtime $(SPL_LDFLAGS)build/pe/BeJwzNPROTMtODM7My_1YviAcAImgED0.o \
-	    build/operator/KafkaSinkOp.o \
-	    build/type/BeJwrMS42LckvyEwuNs5OrSw2z00tLk5MTwUAaSIIDt.o 
