@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bundleInfoModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/bundleInfoModel" adlFile="submit.Inv29.adl" applicationDirectory="gogo" buildDate="" buildId="" bundleVersion="4100" executionMode="distributed" outputDirectory="Distributed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <toolkit compileRoot="/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/spl" name="spl" version="1.2.1">
+    <file name="impl/lib/com.ibm.streams.control.internal.jar"/>
+    <file name="impl/lib/libstreams-stdtk-javaop.so.0"/>
+    <file name="impl/lib/libstreams-stdtk-runtime.so.0"/>
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/stream/StreamsStudio/workspace/EAC" name="EAC" version="1.0.0">
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.hbase" name="com.ibm.streamsx.hbase" version="2.0.0">
+    <file name="opt/downloaded/htrace-core-2.04.jar"/>
+    <file name="opt/downloaded/commons-codec-1.7.jar"/>
+    <file name="opt/downloaded/hadoop-auth-2.2.0.jar"/>
+    <file name="opt/downloaded/hbase-protocol-0.98.4-hadoop2.jar"/>
+    <file name="opt/downloaded/hbase-client-0.98.4-hadoop2.jar"/>
+    <file name="opt/downloaded/jackson-core-asl-1.8.8.jar"/>
+    <file name="opt/downloaded/hbase-common-0.98.4-hadoop2.jar"/>
+    <file name="opt/downloaded/commons-configuration-1.6.jar"/>
+    <file name="opt/downloaded/commons-logging-1.1.1.jar"/>
+    <file name="opt/downloaded/jackson-mapper-asl-1.8.8.jar"/>
+    <file name="opt/downloaded/hadoop-common-2.2.0.jar"/>
+    <file name="impl/lib/com.ibm.streamsx.hbase.jar"/>
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.hdfs" name="com.ibm.streamsx.hdfs" version="3.0.0">
+    <file name="impl/lib/BigData.jar"/>
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.messaging2" name="com.ibm.streamsx.messaging" version="4.0.0">
+    <file name="impl/lib/com.ibm.streamsx.messaging.jar"/>
+    <file name="impl/nl/MessagingResource.dat"/>
+    <file name="opt/downloaded/activation-1.1.jar"/>
+    <file name="opt/downloaded/activemq-client-5.11-SNAPSHOT.jar"/>
+    <file name="opt/downloaded/amqp-client-3.5.6.jar"/>
+    <file name="opt/downloaded/geronimo-j2ee-management_1.1_spec-1.0.1.jar"/>
+    <file name="opt/downloaded/geronimo-jms_1.1_spec-1.1.1.jar"/>
+    <file name="opt/downloaded/hawtbuf-1.11.jar"/>
+    <file name="opt/downloaded/jline-0.9.94.jar"/>
+    <file name="opt/downloaded/jopt-simple-3.2.jar"/>
+    <file name="opt/downloaded/junit-3.8.1.jar"/>
+    <file name="opt/downloaded/kafka-clients-0.9.0.0.jar"/>
+    <file name="opt/downloaded/kafka_2.10-0.9.0.0.jar"/>
+    <file name="opt/downloaded/log4j-1.2.15.jar"/>
+    <file name="opt/downloaded/lz4-1.2.0.jar"/>
+    <file name="opt/downloaded/mail-1.4.jar"/>
+    <file name="opt/downloaded/metrics-core-2.2.0.jar"/>
+    <file name="opt/downloaded/netty-3.7.0.Final.jar"/>
+    <file name="opt/downloaded/org.eclipse.paho.client.mqttv3-1.0.1.jar"/>
+    <file name="opt/downloaded/scala-library-2.10.5.jar"/>
+    <file name="opt/downloaded/slf4j-api-1.7.10.jar"/>
+    <file name="opt/downloaded/slf4j-log4j12-1.7.6.jar"/>
+    <file name="opt/downloaded/snappy-java-1.1.1.7.jar"/>
+    <file name="opt/downloaded/zkclient-0.7.jar"/>
+    <file name="opt/downloaded/zookeeper-3.4.6.jar"/>
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+  <toolkit compileRoot="/home/stream/StreamsStudio/workspace/gogo" name="gogo" version="1.0.0">
+    <file name="etc/hbase-site.xml"/>
+    <file name="etc/producer.properties"/>
+    <file name="etc/consumer29.properties"/>
+    <file name="etc/consumer31.properties"/>
+    <file name="etc/consumer28.properties"/>
+    <file name="etc/124.txt"/>
+    <file name="etc/consumer.properties"/>
+    <file name="etc/consumer27.properties"/>
+    <file name="toolkit.xml"/>
+  </toolkit>
+
+</bundleInfoModel>

@@ -18,6 +18,7 @@ public composite allinone31(output LabelStream1 )
 				placement : partitionColocation("AB") ;
 		}
 
+
 		stream<application::Feature> createmap0 = Custom(KafkaStream)
 		{
 			logic
@@ -35,7 +36,7 @@ public composite allinone31(output LabelStream1 )
 					temp = tokenize(message, ",", true) ;
 					//println((size(temp)));
 					if(size(temp) == 14)
-					{
+					{	//println(temp);
 						for(int32 k in range(0, 14))
 						{
 							counter [ attr [ k ] ] =(float64) temp [ k ] ;
@@ -46,11 +47,11 @@ public composite allinone31(output LabelStream1 )
 					}
 
 					else if(size(temp) == 13)
-					{
+					{	//println(temp);
 						counter [ "latenID" ] = 0.0 ;
 						for(int32 k in range(1, 14))
 						{
-							counter [ attr [ k ] ] =(float64) temp [ k ] ;
+							counter [ attr [ k ] ] =(float64) temp [ k-1 ] ;
 						}
 
 						submit({ flowID = { srcAddr = "123", srcPort =(uint16) 456, dstAddr =
@@ -82,17 +83,20 @@ public composite allinone31(output LabelStream1 )
 					placement : partitionColocation("AB") ;
 			}
 		//write to Hbase
+
 		stream<rstring key, tuple<rstring timeend> data >toHBASE = Custom(OutputStream)
 			{
 				logic
 					onTuple OutputStream :{
-						if((int32)message%1000==0){
-							submit({key = message, data ={timeend="123"}},toHBASE) ;
+						//println((int32)tokenize(message, ",", true)[0]);
+						if((int32)tokenize(message, ",", true)[0]%1000==0){
+							submit({key = tokenize(message, ",", true)[0], data ={timeend="1"}},toHBASE) ;
 						}
 					}
 				config
 					placement : partitionColocation("AB") ;
 			}
+		
 		() as putsink = HBASEPut(toHBASE)
 			{
 				param
@@ -103,8 +107,7 @@ public composite allinone31(output LabelStream1 )
 					valueAttrName : "data" ;
 				config
 					placement : partitionColocation("AB") ;
-			}
-
+		}
 	}
 
 

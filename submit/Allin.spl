@@ -1,16 +1,17 @@
 namespace submit ;
-use com.ibm.streamsx.messaging.kafka::*;
 
+use com.ibm.streamsx.messaging.kafka::* ;
 use application::DTree_Classifier ;
 
 composite Inv27
 {
 	graph
-		@parallel(width=7)
+		@parallel(width = 7)
 		(stream<application::FlowID flowID, rstring label> LabelStream1) =
 			submit::allinone27()
-		{	param
-				topic:"28party";
+		{
+			param
+				topic : "7party1" ;
 			config
 				placement : host(kafak_tree) ;
 		}
@@ -18,8 +19,9 @@ composite Inv27
 	config
 		hostPool :
 		//HDFSreader = createPool({tags=["HDFSreader"], size=1}, Sys.Exclusive),
-		kafak_tree = createPool({ tags = [ "kafak_tree" ], size = 1 }, Sys.Exclusive);
-		//decision = createPool({tags=["decision"], size=1}, Sys.Exclusive);
+		kafak_tree = createPool({ tags = [ "kafak_tree" ], size = 1 },
+			Sys.Exclusive) ;
+			//decision = createPool({tags=["decision"], size=1}, Sys.Exclusive);
 
 }
 

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<operatorInstanceModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/operator/instance" xmlns:an="http://www.ibm.com/xmlns/prod/streams/spl/annotation" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <kind>spl.utility::Switch</kind>
+    <class>LabelStream1::DTree1::LoadedSwitch</class>
+    <operatorModelDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/spl/spl/utility/Switch</operatorModelDirectory>
+    <applicationDirectory>/home/stream/StreamsStudio/workspace/gogo</applicationDirectory>
+    <dataDirectory>/home/stream/StreamsStudio/workspace/gogo/data</dataDirectory>
+    <outputDirectory>/home/stream/StreamsStudio/workspace/gogo/output/submit.Inv27/Standalone</outputDirectory>
+    <toolkits>
+      <toolkit isCurrentToolkit="false">
+        <name>gogo</name>
+        <rootDirectory>/home/stream/StreamsStudio/workspace/gogo</rootDirectory>
+        <index>0</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="true">
+        <name>spl</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/spl</rootDirectory>
+        <index>1</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>EAC</name>
+        <rootDirectory>/home/stream/StreamsStudio/workspace/EAC</rootDirectory>
+        <index>2</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hbase</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.hbase</rootDirectory>
+        <index>3</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hdfs</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.hdfs</rootDirectory>
+        <index>4</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.messaging</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.messaging2</rootDirectory>
+        <index>5</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>streamsx.networkpacket</name>
+        <rootDirectory>/home/stream/StreamsStudio/workspace/streamsx.networkpacket</rootDirectory>
+        <index>6</index>
+      </toolkit>
+    </toolkits>
+    <optimized>true</optimized>
+    <verbose>false</verbose>
+    <networkByteOrdering>false</networkByteOrdering>
+    <codeBeautification>false</codeBeautification>
+    <includes>
+      <include>"../../../type/BeJwrMS4xKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1uNjI0wUA7ZYXB4.h"</include>
+      <include>"../../../type/BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n.h"</include>
+      <include>"../../../type/BeJwrMcw0TSnNza0EABAkANw.h"</include>
+    </includes>
+    <stateVariables/>
+    <runtimeConstants>
+      <runtimeConstant>
+        <name>lit$0</name>
+        <cppType>SPL::boolean</cppType>
+        <splType>boolean</splType>
+        <value>false</value>
+      </runtimeConstant>
+      <runtimeConstant>
+        <name>lit$1</name>
+        <cppType>SPL::boolean</cppType>
+        <splType>boolean</splType>
+        <value>true</value>
+      </runtimeConstant>
+    </runtimeConstants>
+    <sourceLocation>
+      <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+      <line>187</line>
+      <column>4</column>
+    </sourceLocation>
+    <productVersion>4.1.1.0</productVersion>
+    <checkpointKind>none</checkpointKind>
+  </context>
+
+  <parameters>
+    <parameter>
+      <name>initialStatus</name>
+      <values>
+        <value>
+          <cppType>SPL::boolean</cppType>
+          <splType>boolean</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$0</cppExpression>
+          <splExpression>false</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+            <line>191</line>
+            <column>23</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+        <line>191</line>
+        <column>7</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>status</name>
+      <values>
+        <value>
+          <cppType>SPL::boolean</cppType>
+          <splType>boolean</splType>
+          <hasRuntimeConstant>true</hasRuntimeConstant>
+          <cppExpression>lit$1</cppExpression>
+          <splExpression>true</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>Expression</parameterExpressionMode>
+          <sourceLocation>
+            <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+            <line>192</line>
+            <column>16</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+        <line>192</line>
+        <column>7</column>
+      </sourceLocation>
+    </parameter>
+  </parameters>
+
+  <inputPorts>
+    <inputPort>
+      <index>0</index>
+      <tupleCppName>iport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMS4xKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1uNjI0wUA7ZYXB4</tupleCppType>
+      <tupleSPLType>tuple&lt;tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt; flowID,map&lt;rstring,float64&gt; features,rstring ID&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>false</mutationAllowed>
+      <sourceLocation>
+        <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+        <line>187</line>
+        <column>61</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>flowID</name>
+          <cppType>SPL::BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n</cppType>
+          <splType>tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt;</splType>
+        </attribute>
+        <attribute>
+          <name>features</name>
+          <cppType>SPL::map&lt;SPL::rstring, SPL::float64 &gt;</cppType>
+          <splType>map&lt;rstring,float64&gt;</splType>
+        </attribute>
+        <attribute>
+          <name>ID</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="flowID">
+          <tt:tuple>
+            <tt:attr name="srcAddr" type="rstring"/>
+            <tt:attr name="srcPort" type="uint16"/>
+            <tt:attr name="dstAddr" type="rstring"/>
+            <tt:attr name="dstPort" type="uint16"/>
+          </tt:tuple>
+        </tt:attr>
+        <tt:attr name="features">
+          <tt:map keyType="rstring" valueType="float64"/>
+        </tt:attr>
+        <tt:attr name="ID" type="rstring"/>
+      </tuple>
+    </inputPort>
+    <inputPort isControlPort="true">
+      <index>1</index>
+      <tupleCppName>iport$1</tupleCppName>
+      <tupleCppType>SPL::BeJwrMcw0TSnNza0EABAkANw</tupleCppType>
+      <tupleSPLType>tuple&lt;int32 dummy&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>false</mutationAllowed>
+      <sourceLocation>
+        <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+        <line>188</line>
+        <column>6</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>dummy</name>
+          <cppType>SPL::int32</cppType>
+          <splType>int32</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="dummy" type="int32"/>
+      </tuple>
+    </inputPort>
+  </inputPorts>
+
+  <outputPorts>
+    <outputPort>
+      <index>0</index>
+      <tupleCppName>oport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMS4xKTYvLkp2TEkp8gYxAvKLSorNU4pLICJABkjELC0nv9zTJbfYzSItNbGktCi1uNjI0wUA7ZYXB4</tupleCppType>
+      <tupleSPLType>tuple&lt;tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt; flowID,map&lt;rstring,float64&gt; features,rstring ID&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>false</mutationAllowed>
+      <sourceLocation>
+        <file>/home/stream/StreamsStudio/workspace/EAC/application/Classifier.spl</file>
+        <line>187</line>
+        <column>5</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>flowID</name>
+          <cppType>SPL::BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n</cppType>
+          <splType>tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt;</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::BeJwrMSk2Ly5KdkxJKfIGMQLyi0qKzVOKSyAiQAZIBAAT7A5n</cppType>
+                <splType>tuple&lt;rstring srcAddr,uint16 srcPort,rstring dstAddr,uint16 dstPort&gt;</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_flowID()</cppExpression>
+                <splExpression>LabelStream1.createmap0.flowID</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>features</name>
+          <cppType>SPL::map&lt;SPL::rstring, SPL::float64 &gt;</cppType>
+          <splType>map&lt;rstring,float64&gt;</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::map&lt;SPL::rstring, SPL::float64 &gt;</cppType>
+                <splType>map&lt;rstring,float64&gt;</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_features()</cppExpression>
+                <splExpression>LabelStream1.createmap0.features</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+        <attribute>
+          <name>ID</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <assignment>
+            <sourceLocation>
+              <file>&lt;invalid&gt;</file>
+              <line>-1</line>
+              <column>0</column>
+            </sourceLocation>
+            <values>
+              <value>
+                <cppType>SPL::rstring</cppType>
+                <splType>rstring</splType>
+                <hasRuntimeConstant>false</hasRuntimeConstant>
+                <cppExpression>iport$0.get_ID()</cppExpression>
+                <splExpression>LabelStream1.createmap0.ID</splExpression>
+                <hasFunctions>false</hasFunctions>
+                <hasSideEffects>false</hasSideEffects>
+                <readsState>false</readsState>
+                <hasStreamAttributes>true</hasStreamAttributes>
+                <sourceLocation>
+                  <file>&lt;invalid&gt;</file>
+                  <line>-1</line>
+                  <column>0</column>
+                </sourceLocation>
+              </value>
+            </values>
+          </assignment>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="flowID">
+          <tt:tuple>
+            <tt:attr name="srcAddr" type="rstring"/>
+            <tt:attr name="srcPort" type="uint16"/>
+            <tt:attr name="dstAddr" type="rstring"/>
+            <tt:attr name="dstPort" type="uint16"/>
+          </tt:tuple>
+        </tt:attr>
+        <tt:attr name="features">
+          <tt:map keyType="rstring" valueType="float64"/>
+        </tt:attr>
+        <tt:attr name="ID" type="rstring"/>
+      </tuple>
+      <finalPunctuationPortScope>
+        <port>0</port>
+        <port>1</port>
+      </finalPunctuationPortScope>
+    </outputPort>
+  </outputPorts>
+
+</operatorInstanceModel>

@@ -33,28 +33,30 @@ public composite allinone27(output LabelStream1 )
 				onTuple KafkaStream :
 				{
 					temp = tokenize(message, ",", true) ;
+					//println(message);
 					//println((size(temp)));
 					if(size(temp) == 14)
-					{
-						for(int32 k in range(0, 14))
-						{
-							counter [ attr [ k ] ] =(float64) temp [ k ] ;
-						}
+					{	//println(temp);
 
-						submit({ flowID = { srcAddr = "123", srcPort =(uint16) 456, dstAddr =
-							"123", dstPort =(uint16) 456 }, features = counter }, createmap0) ;
-					}
-
-					else if(size(temp) == 13)
-					{
-						counter [ "latenID" ] = 0.0 ;
 						for(int32 k in range(1, 14))
 						{
 							counter [ attr [ k ] ] =(float64) temp [ k ] ;
 						}
 
 						submit({ flowID = { srcAddr = "123", srcPort =(uint16) 456, dstAddr =
-							"123", dstPort =(uint16) 456 }, features = counter }, createmap0) ;
+							"123", dstPort =(uint16) 456 }, features = counter,ID=temp[0]}, createmap0) ;
+					}
+
+					else if(size(temp) == 13)
+					{	//println(temp);
+						counter [ "latenID" ] = 1.0 ;
+						for(int32 k in range(1, 14))
+						{
+							counter [ attr [ k ] ] =(float64) temp [ k-1 ] ;
+						}
+						
+						submit({ flowID = { srcAddr = "123", srcPort =(uint16) 456, dstAddr =
+							"123", dstPort =(uint16) 456 }, features = counter,ID="1.0"}, createmap0) ;
 					}
 
 				}
@@ -73,37 +75,42 @@ public composite allinone27(output LabelStream1 )
 				config
 					placement : partitionColocation("AB") ;
 			}
-
+		/*
 		() as KafkaSinkOp = KafkaProducer(OutputStream)
 			{
 				param
 					propertiesFile : "etc/producer.properties" ;
 				config
 					placement : partitionColocation("AB") ;
-			}
+			}*/
 		//write to Hbase
+
 		stream<rstring key, tuple<rstring timeend> data >toHBASE = Custom(OutputStream)
 			{
 				logic
 					onTuple OutputStream :{
-						if((int32)message%1000==0){
-							submit({key = message, data ={timeend="123"}},toHBASE) ;
+						
+						if((int32)tokenize(tokenize(message, ",", true)[0],"_",true)[1]%1000==0){
+							
+							printStringLn("check:"+message+":check");
+							submit({key = tokenize(message, ",", true)[0], data ={timeend="1"}},toHBASE) ;
 						}
 					}
 				config
 					placement : partitionColocation("AB") ;
 			}
+		
 		() as putsink = HBASEPut(toHBASE)
 			{
 				param
 					hbaseSite : "hbase-site.xml" ;
 					rowAttrName : "key" ;
-					tableName : "streamsSample_books" ;
+					tableName : "streamsSample_both" ;
 					staticColumnFamily : "all" ;
 					valueAttrName : "data" ;
 				config
-					placement : partitionColocation("AB") ;
-			}
+			placement : partitionColocation("AB") ;
+		}
 
 	}
 

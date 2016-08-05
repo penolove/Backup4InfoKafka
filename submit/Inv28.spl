@@ -10,7 +10,7 @@ composite Inv28
 		(stream<application::FlowID flowID, rstring label> LabelStream1) =
 			submit::allinone28()
 		{	param
-				topic:"28party";
+				topic:"21party";
 			config
 				placement : host(kafak_tree) ;
 		}

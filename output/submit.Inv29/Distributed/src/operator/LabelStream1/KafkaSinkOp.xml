@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<operatorInstanceModel xmlns="http://www.ibm.com/xmlns/prod/streams/spl/operator/instance" xmlns:an="http://www.ibm.com/xmlns/prod/streams/spl/annotation" xmlns:tt="http://www.ibm.com/xmlns/prod/streams/spl/tupleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <context>
+    <kind>com.ibm.streamsx.messaging.kafka::KafkaProducer</kind>
+    <class>LabelStream1::KafkaSinkOp</class>
+    <operatorModelDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/spl/spl/utility/JavaOp</operatorModelDirectory>
+    <applicationDirectory>/home/stream/StreamsStudio/workspace/gogo</applicationDirectory>
+    <dataDirectory>/home/stream/StreamsStudio/workspace/gogo/data</dataDirectory>
+    <outputDirectory>/home/stream/StreamsStudio/workspace/gogo/output/submit.Inv29/Distributed</outputDirectory>
+    <toolkits>
+      <toolkit isCurrentToolkit="false">
+        <name>gogo</name>
+        <rootDirectory>/home/stream/StreamsStudio/workspace/gogo</rootDirectory>
+        <index>0</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>spl</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/spl</rootDirectory>
+        <index>1</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>EAC</name>
+        <rootDirectory>/home/stream/StreamsStudio/workspace/EAC</rootDirectory>
+        <index>2</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hbase</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.hbase</rootDirectory>
+        <index>3</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>com.ibm.streamsx.hdfs</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.hdfs</rootDirectory>
+        <index>4</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="true">
+        <name>com.ibm.streamsx.messaging</name>
+        <rootDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.messaging2</rootDirectory>
+        <index>5</index>
+      </toolkit>
+      <toolkit isCurrentToolkit="false">
+        <name>streamsx.networkpacket</name>
+        <rootDirectory>/home/stream/StreamsStudio/workspace/streamsx.networkpacket</rootDirectory>
+        <index>6</index>
+      </toolkit>
+    </toolkits>
+    <optimized>true</optimized>
+    <verbose>false</verbose>
+    <networkByteOrdering>false</networkByteOrdering>
+    <codeBeautification>false</codeBeautification>
+    <includes>
+      <include>"../../type/BeJwrMSo2LckvyEwuNs9NLS5OTE8FAEDwAb9.h"</include>
+    </includes>
+    <stateVariables/>
+    <runtimeConstants/>
+    <sourceLocation>
+      <file>submit/allinone29.spl</file>
+      <line>77</line>
+      <column>3</column>
+    </sourceLocation>
+    <productVersion>4.1.1.0</productVersion>
+    <types>
+      <type index="0" type="rstring"/>
+    </types>
+    <javaOperatorModelDirectory>/home/stream/InfoSphere_Streams/4.1.1.0/toolkits/com.ibm.streamsx.messaging2/com.ibm.streamsx.messaging.kafka/KafkaProducer</javaOperatorModelDirectory>
+    <checkpointKind>none</checkpointKind>
+  </context>
+
+  <parameters>
+    <parameter>
+      <name>className</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>SPL::rstring("com.ibm.streamsx.messaging.kafka.KafkaSink")</cppExpression>
+          <splExpression>"com.ibm.streamsx.messaging.kafka.KafkaSink"</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>&lt;invalid&gt;</file>
+            <line>-1</line>
+            <column>0</column>
+          </sourceLocation>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>&lt;invalid&gt;</file>
+        <line>-1</line>
+        <column>0</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>classLibrary</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>(getToolkitDirectory(SPL::rstring("com.ibm.streamsx.messaging")) + SPL::rstring("/impl/lib/com.ibm.streamsx.messaging.jar"))</cppExpression>
+          <splExpression>getToolkitDirectory("com.ibm.streamsx.messaging") + "/impl/lib/com.ibm.streamsx.messaging.jar"</splExpression>
+          <hasFunctions>true</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>&lt;invalid&gt;</file>
+            <line>-1</line>
+            <column>0</column>
+          </sourceLocation>
+          <expressionTree>
+            <binary op="+" type="0">
+              <lhs>
+                <call fcn="getToolkitDirectory" type="0">
+                  <args count="1">
+                    <arg type="0">
+                      <literal type="0">"com.ibm.streamsx.messaging"</literal>
+                    </arg>
+                  </args>
+                </call>
+              </lhs>
+              <rhs>
+                <literal type="0">"/impl/lib/com.ibm.streamsx.messaging.jar"</literal>
+              </rhs>
+            </binary>
+          </expressionTree>
+        </value>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>(getToolkitDirectory(SPL::rstring("com.ibm.streamsx.messaging")) + SPL::rstring("/opt/downloaded/*"))</cppExpression>
+          <splExpression>getToolkitDirectory("com.ibm.streamsx.messaging") + "/opt/downloaded/*"</splExpression>
+          <hasFunctions>true</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>&lt;invalid&gt;</file>
+            <line>-1</line>
+            <column>0</column>
+          </sourceLocation>
+          <expressionTree>
+            <binary op="+" type="0">
+              <lhs>
+                <call fcn="getToolkitDirectory" type="0">
+                  <args count="1">
+                    <arg type="0">
+                      <literal type="0">"com.ibm.streamsx.messaging"</literal>
+                    </arg>
+                  </args>
+                </call>
+              </lhs>
+              <rhs>
+                <literal type="0">"/opt/downloaded/*"</literal>
+              </rhs>
+            </binary>
+          </expressionTree>
+        </value>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>(getToolkitDirectory(SPL::rstring("com.ibm.streamsx.messaging")) + SPL::rstring("/opt/*"))</cppExpression>
+          <splExpression>getToolkitDirectory("com.ibm.streamsx.messaging") + "/opt/*"</splExpression>
+          <hasFunctions>true</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>&lt;invalid&gt;</file>
+            <line>-1</line>
+            <column>0</column>
+          </sourceLocation>
+          <expressionTree>
+            <binary op="+" type="0">
+              <lhs>
+                <call fcn="getToolkitDirectory" type="0">
+                  <args count="1">
+                    <arg type="0">
+                      <literal type="0">"com.ibm.streamsx.messaging"</literal>
+                    </arg>
+                  </args>
+                </call>
+              </lhs>
+              <rhs>
+                <literal type="0">"/opt/*"</literal>
+              </rhs>
+            </binary>
+          </expressionTree>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>&lt;invalid&gt;</file>
+        <line>-1</line>
+        <column>0</column>
+      </sourceLocation>
+    </parameter>
+    <parameter>
+      <name>propertiesFile</name>
+      <values>
+        <value>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+          <hasRuntimeConstant>false</hasRuntimeConstant>
+          <cppExpression>SPL::rstring("etc/producer.properties")</cppExpression>
+          <splExpression>"etc/producer.properties"</splExpression>
+          <hasFunctions>false</hasFunctions>
+          <hasSideEffects>false</hasSideEffects>
+          <readsState>false</readsState>
+          <hasStreamAttributes>false</hasStreamAttributes>
+          <parameterExpressionMode>AttributeFree</parameterExpressionMode>
+          <sourceLocation>
+            <file>submit/allinone29.spl</file>
+            <line>80</line>
+            <column>23</column>
+          </sourceLocation>
+          <expressionTree>
+            <literal type="0">"etc/producer.properties"</literal>
+          </expressionTree>
+        </value>
+      </values>
+      <sourceLocation>
+        <file>submit/allinone29.spl</file>
+        <line>80</line>
+        <column>6</column>
+      </sourceLocation>
+    </parameter>
+  </parameters>
+
+  <inputPorts>
+    <inputPort>
+      <index>0</index>
+      <tupleCppName>iport$0</tupleCppName>
+      <tupleCppType>SPL::BeJwrMSo2LckvyEwuNs9NLS5OTE8FAEDwAb9</tupleCppType>
+      <tupleSPLType>tuple&lt;rstring topic,rstring message&gt;</tupleSPLType>
+      <facade>false</facade>
+      <mutationAllowed>false</mutationAllowed>
+      <sourceLocation>
+        <file>submit/allinone29.spl</file>
+        <line>77</line>
+        <column>37</column>
+      </sourceLocation>
+      <attributes>
+        <attribute>
+          <name>topic</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+        <attribute>
+          <name>message</name>
+          <cppType>SPL::rstring</cppType>
+          <splType>rstring</splType>
+        </attribute>
+      </attributes>
+      <tuple>
+        <tt:attr name="topic" type="rstring"/>
+        <tt:attr name="message" type="rstring"/>
+      </tuple>
+    </inputPort>
+  </inputPorts>
+
+  <outputPorts/>
+
+</operatorInstanceModel>
